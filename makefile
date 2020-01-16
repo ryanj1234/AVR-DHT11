@@ -79,7 +79,7 @@ OBJDIR = .
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c ../uart/uart.c
+SRC = $(TARGET).c dht11.c ../uart/uart.c
 
 
 # List C++ source files here. (C dependencies are automatically generated.)
@@ -154,7 +154,7 @@ CFLAGS += -funsigned-bitfields
 CFLAGS += -fpack-struct
 CFLAGS += -fshort-enums
 CFLAGS += -Wall
-# CFLAGS += -Werror
+CFLAGS += -Werror
 CFLAGS += -Wstrict-prototypes
 CFLAGS += -mshort-calls
 CFLAGS += -fno-unit-at-a-time
@@ -213,8 +213,8 @@ PRINTF_LIB_MIN = -Wl,-u,vfprintf -lprintf_min
 PRINTF_LIB_FLOAT = -Wl,-u,vfprintf -lprintf_flt
 
 # If this is left blank, then it will use the Standard printf version.
-# PRINTF_LIB = $(PRINTF_LIB_FLOAT)
-PRINTF_LIB = $(PRINTF_LIB_MIN)
+PRINTF_LIB = $(PRINTF_LIB_FLOAT)
+# PRINTF_LIB = $(PRINTF_LIB_MIN)
 #PRINTF_LIB = $(PRINTF_LIB_FLOAT)
 
 
